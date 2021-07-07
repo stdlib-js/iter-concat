@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-concat",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Create an iterator which iterates over the values of two or more iterators.",
   "license": "Apache-2.0",
   "author": {

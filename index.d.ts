@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2019 The Stdlib Authors.
@@ -16,16 +16,29 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
+
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
-* Create an iterator which iterates over the values of two or more iterators.
+* Returns an iterator which iterates over the values of two or more iterators.
 *
-* @module @stdlib/iter-concat
+* ## Notes
+*
+* -   If an environment supports `Symbol.iterator` and all provided iterators are iterable, the returned iterator is iterable.
+*
+* @param iter0 - first iterator
+* @param iter1 - second iterator
+* @param iterN - subsequent iterators
+* @returns iterator
 *
 * @example
-* var array2iterator = require( '@stdlib/array-to-iterator' );
-* var iterConcat = require( '@stdlib/iter-concat' );
+* var array2iterator = require( `@stdlib/array/to-iterator` );
 *
 * var it1 = array2iterator( [ 1, 2 ] );
 * var it2 = array2iterator( [ 3, 4 ] );
@@ -47,12 +60,9 @@
 * var bool = iter.next().done;
 * // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function iterConcat( iter0: Iterator, iter1: Iterator, ...iterN: Array<Iterator> ): Iterator; // tslint:disable-line:max-line-length
 
 
 // EXPORTS //
 
-module.exports = main;
+export = iterConcat;

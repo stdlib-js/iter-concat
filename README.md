@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterConcat from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-concat@esm/index.mjs';
+import iterConcat from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-concat@v0.2.2-esm/index.mjs';
 ```
 
 #### iterConcat( iter0, ...iterator )
@@ -121,7 +121,7 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
 import randn from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randn@esm/index.mjs';
-import iterConcat from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-concat@esm/index.mjs';
+import iterConcat from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-concat@v0.2.2-esm/index.mjs';
 
 // Create a seeded iterator for generating uniformly distributed pseudorandom numbers:
 var runif = randu({
